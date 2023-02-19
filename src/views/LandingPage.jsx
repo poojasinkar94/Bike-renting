@@ -1,15 +1,25 @@
 import React from 'react'
 import '../styles/landingPage.css'
+import Header from '../images/landing-page/header-bg.png'
 import Bike from '../images/landing-page/bike.png'
 import Air from '../images/landing-page/air-plane.png'
 import Back from '../images/landing-page/feautres.png'
+import ProductCard from '../components/ProductCard'
+import { useNavigate } from "react-router-dom";
 
 function LandingPage() {
+  const navigate = useNavigate();
+
+  const navigateToLogin = () => {
+    navigate("/login");
+  }
   return (
     <div>
       <section className='banner'>
       {/* header */}
-          <div></div>
+          <div className='header'>
+              {/* <img className='navbar' src={Header} alt="header_nav" /> */}
+          </div>
       {/* title */}
           <div className='banner-content'>
           <div className='title'>
@@ -19,28 +29,34 @@ function LandingPage() {
           </div>
       {/* button */}
           <div className='button-rent-now'>
-            <button><img className='bike_image' src={Bike} alt='cartoon_bike'/>rent now</button>
+            <button onClick={navigateToLogin}><img className='bike_image' src={Bike} alt='cartoon_bike'/>rent now</button>
           </div>
           </div>
       {/* side image */}
-          <div></div>
+      <div className="air_plane">
+          <img className='air_image' src={Air} alt='Air_plane'/> 
+          </div>
       </section>
       {/* About us */}
       <section className='about-us'>
-          <div className="air_plane">
-          <img className='air_image' src={Air} alt='Air_plane'/> 
-          </div>
-          <div className='left-content'>
+          
           <h1>About us</h1>
+          <div className='content'>
+
+          <div className='left-content'>
           <p>Lorem ipsum dolor sit amet consectetur. Nibh adipiscing enim nibh amet turpis sit. Platea convallis sit aliquam mi morbi amet ac bibendum. Vel tellus in pharetra tellus. Eget nisl odio facilisi consequat risus. Cras sed euismod aliquam vestibulum auctor nibh. Molestie mi feugiat iaculis amet egestas vitae ipsum. Porta id sodales ut dui .</p>
           </div>
 
           <div className='right-content'>
           <img className='bg' src={Back} alt='Background'/>
           </div>
+          </div>
       </section>
+
+      <ProductCard/>
     </div>
   )
 }
 
 export default LandingPage
+
