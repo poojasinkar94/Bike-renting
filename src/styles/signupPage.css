@@ -1,14 +1,8 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
-.login_page{
+.signup_page{
     height: 100vh;
 }
 
-.login{
+.signup{
     /* border: 1px solid #05723E; */
     background-color:#05723E;
     margin: auto;
@@ -17,21 +11,18 @@
     position: relative;
 }
 
-.login_patch img{
-    width:100% ;
-    /* object-fit: cover; */
+.signup_patch img{
+    width: 100%;
 }
 
-.login_title{
+.signup_title{
     padding:50px;
-    margin-top:20px;
+    margin-top:15px;
     display: flex;
     flex-direction: column;
-    /* align-items: center; */
-   
 }
 
-.login_title h1{
+.signup_title h1{
     color: #FFFFFF;
     font-family: 'Recoleta';
     font-style: normal;
@@ -40,7 +31,7 @@
     /* line-height: 108.5%; */
 }
 
-.login_title p{
+.signup_title p{
     color: #FFFFFF;
     font-family: 'Lato';
     font-style: italic;
@@ -49,12 +40,13 @@
     /* line-height: 108.5%; */
 }
 
-.login_title .textField {
+.signup_title .textField {
     width: 100%;
-    margin-top: 40px;
+    margin-top:40px;
     color: #FFFFFF;
 }
-.login_title button{
+
+.signup_title button{
     font-family: 'Recoleta';
     width:100px;
     margin-top:30px;
@@ -67,13 +59,12 @@
 
 .resend_btn{
     /* border-bottom: 1px solid black; */
-    margin-top:40px;
+    margin-top:-10px;
     /* padding-bottom: 10px; */
     /* width: 300px; */
     display: flex;
     justify-content: flex-end;
 }
-
 
 .puzzle_img{
     position: absolute;
@@ -86,9 +77,5 @@
     position: absolute;
     right:86px;
     top: -40px;
-}
-
-
-
-
-
+} 
+ 

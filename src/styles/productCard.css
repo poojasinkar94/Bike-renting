@@ -64,12 +64,28 @@
 }
 
 @media all and (max-width:768px) {
+    .card_title{
+         margin-left:40px;
+         margin-top: -40px;
+    }
+
+    .card_title h1{
+        font-size: 45px;
+    }
+
+    .card_title p{
+        font-size: 20px;
+    }
+
     .card_content{
+        padding-left: 30px;
+        padding-right: 50px;
+        margin-top: 30px;
         flex-direction: column;
     }
     
     .card_btn {
-        width: 95%;
+        width:100%;
     }
 
     .card_image{
