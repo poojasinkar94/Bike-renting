@@ -12,8 +12,8 @@ function ProductCard() {
     navigate("/login");
   }
   return (
-    <div>
-      <section>
+    
+      <section className='products'>
         <div className="card_title">
             <h1>Choose your bike</h1>
             <p>Our Fleet of bikes</p>
@@ -59,7 +59,7 @@ function ProductCard() {
 
         </div>
       </section>
-    </div>
+    
   )
 }
 

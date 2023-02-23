@@ -1,17 +1,16 @@
-*{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
+.products{
+    padding-left:50px;
+    padding-top: 30px
 }
 
 .card_title{
-    margin-left: 5%;
+    /* margin-left: 5%; */
 }
 
 .card_title h1{
     font-family: 'Recoleta';
     font-weight: 700;
-    font-size: 32px;
+    font-size: 4rem;
     color: #000000;
     /* line-height: 108.5%;  */
 }
@@ -20,21 +19,28 @@
     /* font-family: 'Lato'; */
     font-style: italic;
     font-weight: 400;
-    font-size: 16px;
+    font-size: 1.5rem;
+    padding-left: 10px;
     color: #000000;
     /* line-height: 108.5%; */
 }
 
 .card_content{
-    margin:3.5%;
+    /* margin:3.5%; */
+    margin-top: 20px;
+    padding: 20px;
     display: flex;
     /* flex-direction: column; */
-    justify-content: space-evenly;
+    justify-content: space-between;
     
 }
 
+
+
 .card_btn {
+    padding: 0 20px;
     margin-top: 2%;
+    font-size: 1.5rem;
     display: flex;
     justify-content: space-between;
 }
@@ -55,22 +61,44 @@
     justify-content: space-around;
 }
 
+.card{
+    width: 580px;
+    /* border: 1px solid black; */
+}
+
+.card .card_image{
+    width: 100%;
+}
+
 .card_price{
+    font-size: 1.5rem;
+    padding: 0 20px;
     margin-bottom: 3%;
-    width: 150px;
+    width:250px;
     display:flex;
     align-items: center;
     justify-content: space-between;
 }
 
 @media all and (max-width:768px) {
-    .card_title{
-         margin-left:40px;
-         margin-top: -40px;
+    
+    .products{
+        padding: 0 30px;
+        /* padding-top:15px */
+    }
+
+    .card_btn{
+        font-size: 1rem;
+    }
+
+    .card_price{
+        padding-top: 5px;
+        font-size: 1rem;
+        width: 180px;
     }
 
     .card_title h1{
-        font-size: 45px;
+        font-size: 2rem;
     }
 
     .card_title p{
@@ -78,14 +106,28 @@
     }
 
     .card_content{
-        padding-left: 30px;
-        padding-right: 50px;
+        padding: 0;
+    }
+
+    .card_content{
+        /* padding-left: 30px;
+        padding-right: 50px; */
         margin-top: 30px;
         flex-direction: column;
+        align-items: center;
+    }
+
+    .card{
+        width: 320px;
+        margin-bottom: 40px;
     }
     
     .card_btn {
         width:100%;
+    }
+
+    .card_btn button{
+        width:130px;
     }
 
     .card_image{

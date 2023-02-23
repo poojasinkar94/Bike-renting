@@ -36,7 +36,7 @@
     align-items: flex-start;
     justify-content: flex-end;
     position: absolute;
-    top: 75%;
+    top: 65%;
     left:3%;
 }
   
@@ -48,7 +48,7 @@
 .title h1{
     color: #ffffff;
     /* font-weight:800; */
-    font-size: 45px;
+    font-size: 4rem;
     line-height: 108.5%;
 }
 
@@ -103,38 +103,44 @@
 }
 
 .about-us{
-    /* margin-top: 20px; */
+    margin-top: 20px;
     padding:60px
 }
 .content{
     /* margin-left:5%; */
     display: flex;
-    
+    align-items: flex-start;
 }
 
 .about-us h1{
     font-family: 'Recoleta';
     font-weight: 700;
-    font-size: 40px;
+    font-size:4rem;
     /* line-height: 108.5%; */
     /* margin-top: 2%; */
     margin-bottom: 2%;
 }
 
+.left-content{
+    flex:1;
+}
+
 .left-content p{
     /* font-family:'Lato'; */
-    width: 60%;
+    /* width: 60%; */
     font-weight: 400;
-    font-size: 14px;
+    font-size: 2rem;
     color: #292929;
 }
 
-/* .right-content{
-    margin-top: 5%;
-} */
+.right-content{
+    flex:0.5;
+    display: flex;
+    justify-content: center;
+}
 
 .right-content img{
-    width:500px;
+    width:600px;
 }
 
 
@@ -159,38 +165,46 @@
     }
 
     .banner-content{
-        top: 73%;
+        top: 65%;
+    }
+
+    .title h1{
+        font-size: 2rem;
     }
 
     .air_plane img{
-        width: 200px;
+        width: 140px;
     }
     
     .air_plane{
-        top:762px;
-        left: 575px;
+        top:600px;
+        right:10px;
+        /* left: 575px; */
     }
 
     .about-us{
-        padding-left:40px;
-        /* padding-right:40px; */
-        padding-top: 30px;
+        padding: 30px;
     }
 
     .about-us h1{
-        font-size: 45px;
+        font-size:2rem;
     } 
     .content{
         flex-direction: column;
     }
     .left-content p{
         width: 100%;
-        font-size:23px;
-        padding-right:121px;
+        font-size:1.2rem;
+        /* padding-right:121px; */
     }
-    .right-content img{
+
+    .right-content {
         width: 100%;
         padding-top: 30px;
         margin-left: 10px;
+    }
+    .right-content img{
+        width: 340px;
+        
     }
 }
