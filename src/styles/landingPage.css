@@ -64,7 +64,7 @@
     align-items:flex-start;
 }
 
-.button-rent-now button{
+/* .button-rent-now button{
     margin-top:4%; 
     width:165px;
     height: 40px;
@@ -79,7 +79,7 @@
     display: flex;
     align-items: center;
     justify-content: center;
-}
+} */
 
 .button-rent-now img{
    padding-right: 15px;
@@ -144,10 +144,6 @@
 }
 
 
-
-
-
-
 @media all and (max-width:768px) {
     /* .header{
         height: 10.5%;
@@ -165,11 +161,11 @@
     }
 
     .banner-content{
-        top: 65%;
+        top: 70%;
     }
 
     .title h1{
-        font-size: 2rem;
+        font-size: 3rem;
     }
 
     .air_plane img{
@@ -187,14 +183,14 @@
     }
 
     .about-us h1{
-        font-size:2rem;
+        font-size:3rem;
     } 
     .content{
         flex-direction: column;
     }
     .left-content p{
         width: 100%;
-        font-size:1.2rem;
+        font-size:1.5rem;
         /* padding-right:121px; */
     }
 
@@ -206,5 +202,28 @@
     .right-content img{
         width: 340px;
         
+    }
+}
+
+@media all and (max-width:1024px){
+    
+    .air_plane{
+        top:762px;
+        right:15px;
+    }
+
+    .left-content p{
+        width: 100%;
+        font-size:1.2rem;
+        /* padding-right:121px; */
+    }
+
+    .right-content {
+        width: 100%;
+        padding-top: -10px;
+        margin-left: 10px;
+    }
+    .right-content img{
+        width: 450px;
     }
 }

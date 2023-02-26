@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-import "../styles/loginPage.css";
+import "../styles/LoginPage.css";
 import Patch from "../images/patch.png";
 import TextField from "@mui/material/TextField";
 import Red from "../images/login and signup/red.png";
@@ -9,7 +9,7 @@ import Input from "@mui/material/Input";
 function LoginPage() {
   //   getter        setter
 const [phoneNumber, setPhoneNumber] = useState('')
-const title = 'Login Us'
+const title = 'Login'
   return (
     <div className="login_page">
       <div className="login">

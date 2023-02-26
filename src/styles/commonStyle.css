@@ -1,0 +1,16 @@
+.rent-now-btn {
+    margin-top:4%; 
+    width:165px;
+    height: 40px;
+    padding:0.5%;
+    background: #C20909;
+    border: none;
+    border-radius: 28px; 
+    font-family: 'Recoleta';
+    color: white; 
+    font-weight:900;
+    font-size: 22px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}

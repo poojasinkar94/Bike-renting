@@ -9,6 +9,8 @@ import Whatsup from '../images/header/whatsup.png'
 import Login from '../images/header/login.png'
 import ProductCard from '../components/ProductCard'
 import { useNavigate } from "react-router-dom";
+import RentNowBtn from '../components/common/RentNowBtn'
+
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -52,9 +54,13 @@ function LandingPage() {
             <h1><span>collection of bikes.</span></h1>
           </div>
       {/* button */}
-          <div className='button-rent-now'>
+          {/* <div className='button-rent-now'>
             <button onClick={navigateToLogin}><img className='bike_image' src={Bike} alt='cartoon_bike'/>rent now</button>
-          </div>
+          </div> */}
+          <RentNowBtn
+            width={'200px'}
+            label={'Rent now'}
+          />
           </div>
       {/* side image */}
 
