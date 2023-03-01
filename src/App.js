@@ -4,6 +4,8 @@ import LandingPage from './views/LandingPage';
 import { Routes, Route, Outlet, Link } from "react-router-dom";
 import LoginPage from './views/LoginPage';
 import SignupPage from './views/SignupPage';
+import HomePage from './views/HomePage';
+import SelectedBikeForm from './views/SelectedBikeForm';
 
 
 function App() {
@@ -13,6 +15,8 @@ function App() {
     <Route path="/" element={<LandingPage/>} />
     <Route path="/login" element={<LoginPage/>} />
     <Route path="/signup" element={<SignupPage/>} />
+    <Route path="/home" element={<HomePage/>}/>
+    <Route path="/form" element={<SelectedBikeForm/>}/>
     </Routes>
       
       {/* <ProductCard/> */}

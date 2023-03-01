@@ -89,9 +89,9 @@
     /* display: flex;
     justify-content: flex-end; */
     position: absolute;
-    bottom:-100px;
+    /* bottom:-100px; */
     right: 30px;
-    top: 870px;
+    top: 90%;
     /* width: 168px;
     height: 168px; */
     /* left: 250px;

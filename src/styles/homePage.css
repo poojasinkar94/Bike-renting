@@ -1,0 +1,54 @@
+.Home_Page{
+    height: 100vh;
+}
+
+.main_heading{
+    /* border: 1px solid #05723E; */
+    /* background-color:#05723E; */
+    padding: 30px 40px;
+    margin: auto;
+    width: 600px;
+    height: 100vh;
+     /* position: relative; */
+}
+
+.heading{
+    display: flex;
+    justify-content:space-between;  
+}
+
+.heading .HomePageLogo{
+    width: 40px;
+    height: 40px;
+}
+
+.heading .HomePageCall{
+    width: 28px;
+    height: 28px;
+}
+
+.Home_Page_title{
+    
+}
+
+.Home_Page_patch{
+    /* border: 1px solid #05723E; */
+    background-color:#05723E ;
+    width: 600px;
+    height: 50px;
+    margin-left: -41px;
+    margin-top: 30px;
+}
+
+.Home_Page_patch h1{
+    color: #FFFFFF;
+    padding-left: 30px;
+    padding-top: 7px;
+    font-size: 25px;
+}
+
+.Home_Page_title .HomePatch{
+    margin-top: -40px;
+    margin-left: 499px;
+}
+

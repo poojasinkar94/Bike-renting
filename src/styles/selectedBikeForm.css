@@ -1,0 +1,70 @@
+.SelectedBikeForm{
+    /* border: 1px solid #05723E; */
+    background-color:#05723E;
+    padding: 30px 40px;
+    margin: auto;
+    width: 600px;
+    height: 100vh;
+}
+
+.bikeForm{
+    color: #FFFFFF;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bikeForm p{
+    padding-top: 20px;
+    font-weight: 400;
+    font-size: 17px;
+    line-height: 108.5%;
+}
+
+.bikeForm h2{
+    font-weight: 700;
+    font-size: 28px;
+    line-height: 150%;
+}
+
+.Details_bg_color{
+    border: 1px solid #FFFFFF;
+    background-color: #FFFFFF;
+    border-radius:20px;
+    width: 180px;
+    height: 100px;
+    margin-top: 20px;
+}
+
+.Details_bg_color p{
+    padding-top:10px;
+    text-align: center;
+    color: black;
+}
+
+.Details_bg_color h2{
+    text-align: center;
+    color: black;
+}
+
+#para2{
+    font-size: 11px;
+}
+
+.bottomLine{
+    padding-top: 30px;
+    margin: auto;
+    width: 300px;
+}
+
+.details{
+    color: #FFFFFF;
+}
+
+.details form caption{
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 28px;
+    padding-top: 30px;
+}
+
