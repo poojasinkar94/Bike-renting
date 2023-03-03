@@ -11,6 +11,44 @@ import ProductCard from '../components/ProductCard'
 import { useNavigate } from "react-router-dom";
 import RentNowBtn from '../components/common/RentNowBtn'
 
+const BIKE_DATA = [
+  {
+    name: "Avaitor",
+    pricePerHour: 20,
+    pricePerDay: 300,
+    available: true,
+  },
+  {
+    name: "Jupitor",
+    pricePerHour: 18,
+    pricePerDay: 250,
+    available: true,
+  },
+  {
+    name: "Activa",
+    pricePerHour: 20,
+    pricePerDay: 300,
+    available: false,
+  },
+  {
+    name: "Pleasure",
+    pricePerHour: 15,
+    pricePerDay: 200,
+    available: false,
+  },
+  {
+    name: "Vispa",
+    pricePerHour: 25,
+    pricePerDay: 300,
+    available: false,
+  },
+  {
+    name: "Activa",
+    pricePerHour: 20,
+    pricePerDay: 300,
+    available: false,
+  },
+];
 
 function LandingPage() {
   const navigate = useNavigate();
@@ -20,6 +58,9 @@ function LandingPage() {
   }
   return (
     <div>
+
+      {/* banner */}
+
       <section className='banner'>
       {/* header */}
           {/* <div className='header'>
@@ -57,7 +98,7 @@ function LandingPage() {
           {/* <div className='button-rent-now'>
             <button onClick={navigateToLogin}><img className='bike_image' src={Bike} alt='cartoon_bike'/>rent now</button>
           </div> */}
-          <RentNowBtn
+          <RentNowBtn onClick={navigateToLogin}
             width={'200px'}
             label={'Rent now'}
           />
@@ -88,7 +129,30 @@ function LandingPage() {
           </div>
       </section>
 
-      <ProductCard/>
+      {/* product card */}
+
+      <section className='products'>
+        <div className="card_title">
+            <h1>Choose your bike</h1>
+            <p>Our Fleet of bikes</p>
+        </div>
+        
+        <div className='card_content'>
+
+         {BIKE_DATA.map((data)=>(
+          <ProductCard 
+            name={data.name}
+            pricePerHour={data.pricePerHour}
+            pricePerDay={data.pricePerDay}
+            available={data.available}
+          />
+         ))}     
+        
+        
+        </div>
+      </section>
+    
+
     </div>
   )
 }

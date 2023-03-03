@@ -7,8 +7,20 @@ import White from "../images/login and signup/white.png";
 import Input from "@mui/material/Input";
 
 function LoginPage() {
+  // const navigate = useNavigate();
+
+  const navigateToHome = () => {
+    navigate("/home");
+  }
+
   //   getter        setter
 const [phoneNumber, setPhoneNumber] = useState('')
+const [showResendOtp, setShowResendOtp] = useState(false);
+const [showGetOtp, setShowGetOtp] = useState(true);
+const handleGetOtp = () =>{
+  setShowResendOtp(true);
+  setShowGetOtp(false);
+}
 const title = 'Login'
   return (
     <div className="login_page">
@@ -22,7 +34,7 @@ const title = 'Login'
         {/* jsx */}
           <h1>{title}</h1> 
           <p>for a seamless experience</p>
-          <p>{phoneNumber}</p>
+
           <TextField
             className="textField"
             id="standard-basic"
@@ -34,8 +46,13 @@ const title = 'Login'
               console.log(event.target.value)
             }}
           />
+          { showGetOtp && <div>
 
-          <button>get otp</button>
+          <button onClick={handleGetOtp}>get otp</button>
+
+          </div>}
+          
+         { showResendOtp && <div>
 
           <div className="resend_btn">
             {/* <input type={Text}></input> */}
@@ -63,7 +80,11 @@ const title = 'Login'
             {/* <button>resend</button> */}
           </div>
 
-          <button>Submit</button>
+          <button onClick={navigateToHome}>
+          Submit
+          </button>
+
+          </div>}
 
         </div>
           <div className="puzzle_img">

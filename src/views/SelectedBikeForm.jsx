@@ -43,6 +43,9 @@ function SelectedBikeForm() {
 
     <div className="details">
         <form>
+        <caption>Details</caption>
+
+        
         </form>
     </div>
 

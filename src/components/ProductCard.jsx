@@ -4,61 +4,45 @@ import Card from '../images/product-card/card 1.png'
 import Bike from '../images/landing-page/bike.png'
 import Arrow from '../images/product-card/arrow.png'
 import { useNavigate } from "react-router-dom";
+import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 
-function ProductCard() {
+function ProductCard(props) {
+
+  const {name,pricePerHour,pricePerDay,available}=props
   const navigate = useNavigate();
+   
 
   const navigateToLogin = () => {
     navigate("/login");
   }
   return (
     
-      <section className='products'>
-        <div className="card_title">
-            <h1>Choose your bike</h1>
-            <p>Our Fleet of bikes</p>
-        </div>
-        
-        <div className='card_content'>
-
         <div className='card'>
         <img className='card_image' src={Card} alt='Card_image'/>
         <div className='card_btn'>
-        <h2>Ather</h2>
+        <h2>{name}</h2>
+        <div className='available_icon'>
+          <RadioButtonCheckedIcon style=
+          {{
+            color:"#38950D",
+            marginTop:"15px",
+            marginRight:"8px"
+          }}/>
+          <p>available</p>
+        </div>
         <button onClick={navigateToLogin}><img className='bike_image' src={Bike} alt='cartoon_bike'/>rent now</button>
         </div>
         <div className='card_price'>
-            <p>&#8377; 20/hr </p>
+            <p>&#8377; {pricePerHour}/hr </p>
              <img className='arrow_image' src={Arrow} alt='Arrow_image'/> 
-             <p>&#8377;300/day</p>
+             <p>&#8377;{pricePerDay}/day</p>
         </div>
         </div>
 
-        <div className='card'>
-        <img className='card_image' src={Card} alt='Card_image'/>
-        <div className='card_btn'>
-        <h2>Ather</h2>
-        <button onClick={navigateToLogin}><img className='bike_image' src={Bike} alt='cartoon_bike'/>rent now</button>
-        </div>
-        <div className='card_price'>
-            <p>&#8377; 20/hr </p> 
-            <img className='arrow_image' src={Arrow} alt='Arrow_image'/> <p>&#8377;300/day</p>
-        </div>
-        </div>
+        
 
-        <div className='card'>
-        <img className='card_image' src={Card} alt='Card_image'/>
-        <div className='card_btn'>
-        <h2>Ather</h2>
-        <button onClick={navigateToLogin}><img className='bike_image' src={Bike} alt='cartoon_bike'/>rent now</button>
-        </div>
-        <div className='card_price'>
-            <p>&#8377; 20/hr <img className='arrow_image' src={Arrow} alt='Arrow_image'/> &#8377;300/day</p>
-        </div>
-        </div>
-
-        </div>
-      </section>
+       
+     
     
   )
 }

@@ -3,10 +3,41 @@ import '../styles/homePage.css';
 import Logo from '../images/HomePage/home_page_logo.png';
 import Call from '../images/HomePage/home_page_call.png';
 import HomePatch1 from '../images/HomePage/home_page_patch1.png';
-import HomePatch2 from '../images/HomePage/home_page_patch2.png';
+// import HomePatch2 from '../images/HomePage/home_page_patch2.png';
 import ProductCard from '../components/ProductCard'
 
-
+const BIKE_DATA = [
+  {
+    name: "Avaitor",
+    pricePerHour: 20,
+    pricePerDay: 300,
+    available: true,
+  },
+  {
+    name: "Jupitor",
+    pricePerHour: 18,
+    pricePerDay: 250,
+    available: true,
+  },
+  {
+    name: "Activa",
+    pricePerHour: 20,
+    pricePerDay: 300,
+    available: false,
+  },
+  {
+    name: "Pleasure",
+    pricePerHour: 15,
+    pricePerDay: 200,
+    available: false,
+  },
+  {
+    name: "Vispa",
+    pricePerHour: 25,
+    pricePerDay: 300,
+    available: false,
+  },
+];
 
 function HomePage() {
   return (
@@ -26,10 +57,19 @@ function HomePage() {
             <h1>Good Morning!</h1>
             <img className='HomePatch' src={HomePatch1} alt="HomePatch1" />
 
-            <img className='HomePatch' src={HomePatch2} alt="HomePatch2" />
+            <img className='HomePatch' src={HomePatch1} alt="HomePatch2" />
             </div>
         </div>
-        <ProductCard/>
+
+        {BIKE_DATA.map((data)=>(
+          <ProductCard 
+            name={data.name}
+            pricePerHour={data.pricePerHour}
+            pricePerDay={data.pricePerDay}
+            available={data.available}
+          />
+         ))}
+
         </div>
 
     </div>

@@ -5,26 +5,32 @@
 .main_heading{
     /* border: 1px solid #05723E; */
     /* background-color:#05723E; */
-    padding: 30px 40px;
+    /* padding: 30px 40px; */
     margin: auto;
-    width: 600px;
+    width: 100%;
     height: 100vh;
      /* position: relative; */
 }
 
 .heading{
-    display: flex;
-    justify-content:space-between;  
+    margin: 40px;
+    /* display: flex; */
+    /* justify-content:space-between;   */
 }
 
 .heading .HomePageLogo{
-    width: 40px;
-    height: 40px;
+    width: 50px;
+    height: 50px;
+}
+
+.heading h1{
+    margin-right:600px;
 }
 
 .heading .HomePageCall{
-    width: 28px;
-    height: 28px;
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
 }
 
 .Home_Page_title{
@@ -32,23 +38,27 @@
 }
 
 .Home_Page_patch{
-    /* border: 1px solid #05723E; */
     background-color:#05723E ;
-    width: 600px;
-    height: 50px;
-    margin-left: -41px;
-    margin-top: 30px;
-}
+    width: 100%;
+    height: 60px;
+    display: flex;
+    }
 
 .Home_Page_patch h1{
     color: #FFFFFF;
-    padding-left: 30px;
-    padding-top: 7px;
-    font-size: 25px;
+    padding-left: 40px;
+    padding-top: 10px;
+    font-size: 30px;
 }
 
-.Home_Page_title .HomePatch{
-    margin-top: -40px;
-    margin-left: 499px;
+.HomePatch {
+    width: 110px;
+    height: 110px;
+    display: flex;
+   /* margin-left: 20px; */
 }
+
+
+
+
 

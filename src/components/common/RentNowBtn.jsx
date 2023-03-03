@@ -12,7 +12,7 @@ function RentNowBtn(props) {
                 width: width ? width : '165',
               }}
 
-         //onClick={navigateToLogin}
+         onClick={props.onClick}
          >
          <img className='bike_image' src={Bike} alt='cartoon_bike'/>
          <span

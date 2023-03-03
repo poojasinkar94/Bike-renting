@@ -9,7 +9,15 @@ import Input from "@mui/material/Input";
 function SignupPage() {
     //   getter        setter
 const [phoneNumber, setPhoneNumber] = useState('')
+const [showResendOtp, setShowResendOtp] = useState(false);
+const [showGetOtp, setShowGetOtp] = useState(true);
+const handleGetOtp = () =>{
+  setShowResendOtp(true);
+  setShowGetOtp(false);
+}
+
 const title = 'Sign Up'
+
   return (
     <div className='signup_page'>
     <div className='signup'>
@@ -40,8 +48,14 @@ const title = 'Sign Up'
               console.log(event.target.value)
             }}
     />
+    
+    { showGetOtp && <div>
 
-    <button>get otp</button>
+    <button onClick={handleGetOtp}>get otp</button>
+
+    </div>}
+
+    { showResendOtp && <div>
 
     <div className="resend_btn">
             {/* <input type={Text}></input> */}
@@ -63,10 +77,12 @@ const title = 'Sign Up'
             InputProps={{ endAdornment: <button onClick={()=>{console.log('clicked')
               }} >resend</button> }}
       />
-      {/* <button>resend</button> */}
+      
     </div>
 
     <button>Submit</button>
+
+    </div>}
 
     </div>
 

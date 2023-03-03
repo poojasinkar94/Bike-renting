@@ -31,8 +31,6 @@
     
 }
 
-
-
 .card_btn {
     padding: 0 20px;
     margin-top: 2%;
@@ -57,9 +55,22 @@
     justify-content: space-around;
 }
 
+.available_icon{
+    margin-right: 50px;
+    display: flex;
+}
+
+.available_icon p{
+     color: #38950D;
+     margin-top: 6px;
+}
+
 .card{
     width: 580px;
+    margin: 20px 0;
+    margin-left: -30px;
     /* border: 1px solid black; */
+   
 }
 
 .card .card_image{
