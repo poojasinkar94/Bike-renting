@@ -8,12 +8,14 @@ import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 
 function ProductCard(props) {
 
-  const {name,pricePerHour,pricePerDay,available}=props
+  const {name,pricePerHour,pricePerDay,available,navigateTo}=props
   const navigate = useNavigate();
    
 
   const navigateToLogin = () => {
-    navigate("/login");
+    let path = navigateTo? navigateTo:"/login";
+    console.log(path);
+    navigate(path);
   }
   return (
     

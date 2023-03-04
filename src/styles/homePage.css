@@ -14,8 +14,8 @@
 
 .heading{
     margin: 40px;
-    /* display: flex; */
-    /* justify-content:space-between;   */
+    display: flex;
+    justify-content:space-between;  
 }
 
 .heading .HomePageLogo{
@@ -33,29 +33,24 @@
     margin-top: 10px;
 }
 
-.Home_Page_title{
-    
-}
-
 .Home_Page_patch{
     background-color:#05723E ;
     width: 100%;
     height: 60px;
     display: flex;
+    justify-content: space-between;
+    align-items: center;
     }
 
 .Home_Page_patch h1{
     color: #FFFFFF;
     padding-left: 40px;
-    padding-top: 10px;
     font-size: 30px;
 }
 
 .HomePatch {
     width: 110px;
     height: 110px;
-    display: flex;
-   /* margin-left: 20px; */
 }
 
 

@@ -6,6 +6,7 @@ import LoginPage from './views/LoginPage';
 import SignupPage from './views/SignupPage';
 import HomePage from './views/HomePage';
 import SelectedBikeForm from './views/SelectedBikeForm';
+import Order from './views/Order';
 
 
 function App() {
@@ -17,6 +18,7 @@ function App() {
     <Route path="/signup" element={<SignupPage/>} />
     <Route path="/home" element={<HomePage/>}/>
     <Route path="/form" element={<SelectedBikeForm/>}/>
+    <Route path="/order" element={<Order/>}/>
     </Routes>
       
       {/* <ProductCard/> */}

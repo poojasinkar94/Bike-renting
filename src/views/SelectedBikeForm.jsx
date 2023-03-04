@@ -3,7 +3,8 @@ import '../styles/selectedBikeForm.css'
 import Arrow from '../images/selected bike form/arrow.png'
 import Bike from '../images/selected bike form/bikeSelect.png'
 import Bottom from '../images/selected bike form/bottom_line.png'
-
+import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
+import BottomPatch from '../images/selected bike form/bottom_patch.png'
 
 function SelectedBikeForm() {
   return (
@@ -42,17 +43,50 @@ function SelectedBikeForm() {
     </div>
 
     <div className="details">
-        <form>
-        <caption>Details</caption>
-
+        <h2>Details</h2>
         
-        </form>
+        
+        <div className="upload">
+          <p>Aadhar Card front</p>
+          <div className="upload_icon">
+            <FileUploadOutlinedIcon/>
+          </div>
+        </div>
+
+        <div className="upload">
+          <p>Aadhar Card back</p>
+          <div className="upload_icon">
+            <FileUploadOutlinedIcon/>
+          </div>
+        </div>
+
+        <div className="upload">
+          <p>Driving license</p>
+          <div className="upload_icon">
+            <FileUploadOutlinedIcon/>
+          </div>
+        </div>
+        
+    </div>
+    
+    <div className="btn_pay">
+    <button>Pay</button>
     </div>
 
+    {/* <div className="bottom_patch">
+       <img className='bottomPatch' src={BottomPatch} alt="bottomPatch" />
 
-   
-    
-    </section>
+       <img className='bottomPatch' src={BottomPatch} alt="bottomPatch" />
+
+       <img className='bottomPatch' src={BottomPatch} alt="bottomPatch" />
+
+       <img className='bottomPatch' src={BottomPatch} alt="bottomPatch" />
+
+       <img className='bottomPatch' src={BottomPatch} alt="bottomPatch" />
+
+    </div> */}
+
+</section>
   )
 }
 

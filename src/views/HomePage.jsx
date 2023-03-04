@@ -55,20 +55,27 @@ function HomePage() {
         <div className="Home_Page_title">
             <div className="Home_Page_patch">
             <h1>Good Morning!</h1>
+
+            <div>
             <img className='HomePatch' src={HomePatch1} alt="HomePatch1" />
 
             <img className='HomePatch' src={HomePatch1} alt="HomePatch2" />
             </div>
+            </div>
         </div>
-
+        
+        <div className='card_content'>
         {BIKE_DATA.map((data)=>(
           <ProductCard 
             name={data.name}
             pricePerHour={data.pricePerHour}
             pricePerDay={data.pricePerDay}
             available={data.available}
+            navigateTo={"/form"}
           />
          ))}
+
+        </div>
 
         </div>
 

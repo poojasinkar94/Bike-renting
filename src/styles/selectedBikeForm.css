@@ -60,7 +60,7 @@
     color: #FFFFFF;
 }
 
-.details form caption{
+.details h2{
     font-family: 'Recoleta';
     font-style: normal;
     font-weight: 700;
@@ -68,3 +68,39 @@
     padding-top: 30px;
 }
 
+.upload{
+    display: flex;
+    justify-content:space-between;
+}
+
+.upload p{
+    /* font-family: 'Lato'; */
+    /* font-style: normal; */
+    font-weight: 400;
+    font-size: 18px;
+    line-height: 200%;
+}
+
+.btn_pay{
+    margin: 40px;
+    display: flex;
+    justify-content: center;
+}
+
+.btn_pay button{
+   width: 100px;
+   height: 40px;
+   border-radius: 20px;
+   border: none;
+   font-size: 25px;
+   font-weight: 700;
+   font-family: 'Recoleta';
+} 
+
+/* .bottom_patch{
+    margin-left: -40px;
+}
+
+.bottomPatch {
+   margin-top: 280px;
+} */

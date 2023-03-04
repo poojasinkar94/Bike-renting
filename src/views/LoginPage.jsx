@@ -5,9 +5,12 @@ import TextField from "@mui/material/TextField";
 import Red from "../images/login and signup/red.png";
 import White from "../images/login and signup/white.png";
 import Input from "@mui/material/Input";
+import { useNavigate } from "react-router-dom";
 
 function LoginPage() {
-  // const navigate = useNavigate();
+
+  // useNavigate is a hook provided by react dom library for dynamic navigation
+  const navigate = useNavigate();
 
   const navigateToHome = () => {
     navigate("/home");
