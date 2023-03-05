@@ -37,6 +37,12 @@ const BIKE_DATA = [
     pricePerDay: 300,
     available: false,
   },
+  {
+    name: "Pleasure",
+    pricePerHour: 15,
+    pricePerDay: 200,
+    available: false,
+  }
 ];
 
 function HomePage() {

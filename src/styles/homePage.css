@@ -3,14 +3,12 @@
 }
 
 .main_heading{
-    /* border: 1px solid #05723E; */
-    /* background-color:#05723E; */
-    /* padding: 30px 40px; */
     margin: auto;
     width: 100%;
     height: 100vh;
      /* position: relative; */
 }
+    
 
 .heading{
     margin: 40px;
@@ -51,6 +49,19 @@
 .HomePatch {
     width: 110px;
     height: 110px;
+}
+
+@media all and (max-width:768px){
+    .main_heading{
+        width: 100%;
+    }
+
+    .Home_Page_patch{
+        width: 100%;
+    }
+        
+        
+        
 }
 
 
