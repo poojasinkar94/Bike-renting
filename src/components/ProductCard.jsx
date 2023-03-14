@@ -8,14 +8,21 @@ import RadioButtonCheckedIcon from '@mui/icons-material/RadioButtonChecked';
 
 function ProductCard(props) {
 
-  const {name,pricePerHour,pricePerDay,available,navigateTo}=props
+  const {name,pricePerHour,pricePerDay,available,navigateTo,rentNowBtnClick}=props
   const navigate = useNavigate();
    
 
-  const navigateToLogin = () => {
-    let path = navigateTo? navigateTo:"/login";
-    console.log(path);
-    navigate(path);
+  const handleBtnClick = () => {
+    if(navigateTo){
+      navigate(navigateTo);
+    }
+    if(rentNowBtnClick){
+      rentNowBtnClick();
+    }
+
+    // let path = navigateTo? navigateTo:"/login";
+    // console.log(path);
+   
   }
   return (
     
@@ -27,12 +34,11 @@ function ProductCard(props) {
           <RadioButtonCheckedIcon style=
           {{
             color:"#38950D",
-            marginTop:"15px",
-            marginRight:"8px"
+            
           }}/>
           <p>available</p>
         </div>
-        <button onClick={navigateToLogin}><img className='bike_image' src={Bike} alt='cartoon_bike'/>rent now</button>
+        <button onClick={handleBtnClick}><img className='bike_image' src={Bike} alt='cartoon_bike'/>rent now</button>
         </div>
         <div className='card_price'>
             <p>&#8377; {pricePerHour}/hr </p>

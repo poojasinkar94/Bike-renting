@@ -1,15 +1,8 @@
-/* *{
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-} */
-
 .login_page{
     height: 100vh;
 }
 
 .login{
-    /* border: 1px solid #05723E; */
     background-color:#05723E;
     margin: auto;
     width: 600px;
@@ -23,6 +16,7 @@
 }
 
 .login_title{
+    /* color: #FFFFFF; */
     padding:50px;
     margin-top:20px;
     display: flex;
@@ -49,15 +43,27 @@
     /* line-height: 108.5%; */
 }
 
-.login_title .textField {
-    width: 100%;
-    margin-top: 40px;
-    /* color: #FFFFFF; */
+.input_name{
+    color: #FFFFFF;
 }
+
+.input_name label{
+    font-size: 20px;
+}
+
+.input .input_name{
+    border: 1px solid #05723E;
+    background-color: #05723E;
+    border-bottom-color:#FFFFFF;
+    height: 30px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
 .login_title button{
     font-family: 'Recoleta';
     width:100px;
-    margin-top:30px;
+    /* margin-top:30px; */
     padding: 8px;
     border-radius:28px;
     border: none;
@@ -67,11 +73,21 @@
 
 .resend_btn{
     /* border-bottom: 1px solid black; */
+    border: 1px solid #05723E;
+    border-bottom-color: #FFFFFF;
     margin-top:40px;
-    /* padding-bottom: 10px; */
-    /* width: 300px; */
+    padding-bottom: 10px;
+    margin-bottom: 20px;
     display: flex;
-    justify-content: flex-end;
+    align-items: center;
+    
+}
+
+.resend_btn input{
+    background: none;
+    border: none;
+    width: 100%;
+    
 }
 
 
@@ -87,6 +103,18 @@
     right:86px;
     top: -40px;
 }
+
+/* .input_name input:focus {
+    color:#05723E;
+    background-color: #05723E;
+    border-bottom-color: #FFFFFF;
+    border-color: inherit;
+    outline: 0;
+    box-shadow:none ;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+} */
 
 @media all and (max-width:768px){
     .login{

@@ -1,100 +1,92 @@
-import React, { useState } from 'react';
-import '../styles/signupPage.css';
-import Patch from '../images/patch.png';
-import TextField from '@mui/material/TextField';
-import Red from '../images/login and signup/red.png';
-import White from '../images/login and signup/white.png';
+import React, { useState } from "react";
+import "../styles/signupPage.css";
+import Patch from "../images/patch.png";
+import TextField from "@mui/material/TextField";
+import Red from "../images/login and signup/red.png";
+import White from "../images/login and signup/white.png";
 import Input from "@mui/material/Input";
+import { useNavigate } from "react-router-dom";
 
 function SignupPage() {
-    //   getter        setter
-const [phoneNumber, setPhoneNumber] = useState('')
-const [showResendOtp, setShowResendOtp] = useState(false);
-const [showGetOtp, setShowGetOtp] = useState(true);
-const handleGetOtp = () =>{
-  setShowResendOtp(true);
-  setShowGetOtp(false);
-}
+  
+  const navigate = useNavigate();
 
-const title = 'Sign Up'
+  const navigateToHome = () => {
+    navigate("/home");
+  };
+
+  //   getter        setter
+  const [phoneNumber, setPhoneNumber] = useState("");
+  const [showResendOtp, setShowResendOtp] = useState(false);
+  const [showGetOtp, setShowGetOtp] = useState(true);
+  const handleGetOtp = () => {
+    setShowResendOtp(true);
+    setShowGetOtp(false);
+  };
+
+  const title = "Sign Up";
 
   return (
-    <div className='signup_page'>
-    <div className='signup'>
+    <div className="signup_page">
+      <div className="signup">
+        <div className="signup_patch">
+          <img className="patch" src={Patch} alt="Signup-Patch" />
+        </div>
 
-    <div className='signup_patch'>
-    <img className='patch' src={Patch} alt="Signup-Patch"/>
+        <div className="signup_title">
+          {/* jsx */}
+          <h1>{title}</h1>
+          <p>for a seamless experience</p>
+
+          <form action="">
+            <div className="input_name">
+              <label for="fname">Name</label>
+              <input type="text" id="fname" name="fname" />
+            </div>
+
+            <div className="input_name">
+              <label for="phone">Phone number</label>
+              <input
+                type="tel"
+                id="phone"
+                name="phone"
+                maxLength={10}
+                required
+              />
+            </div>
+          </form>
+
+          {showGetOtp && (
+            <div>
+              <button onClick={handleGetOtp}>get otp</button>
+            </div>
+          )}
+
+          {showResendOtp && (
+            <div>
+              <div className="resend_btn">
+                <button
+                  onClick={() => {
+                    console.log("clicked");
+                  }}
+                >
+                  resend
+                </button>
+              </div>
+
+              <button onClick={navigateToHome}>
+              Submit</button>
+            </div>
+          )}
+        </div>
+
+        <div className="puzzle_img">
+          <img className="red-image" src={Red} alt="red-image" />
+
+          <img className="white-image" src={White} alt="white-image" />
+        </div>
+      </div>
     </div>
-
-    <div className="signup_title">
-    {/* jsx */}
-    <h1>{title}</h1>
-    <p>for a seamless experience</p>
-    <TextField 
-        className='textField' 
-        id="standard-basic" 
-        label="Name" 
-        variant="standard" 
-    />
-
-    <TextField 
-        className='textField' 
-        id="standard-basic" 
-        label="Phone Number" 
-        variant="standard" 
-        value={phoneNumber}
-            onChange={(event)=>{
-              setPhoneNumber(event.target.value)
-              console.log(event.target.value)
-            }}
-    />
-    
-    { showGetOtp && <div>
-
-    <button onClick={handleGetOtp}>get otp</button>
-
-    </div>}
-
-    { showResendOtp && <div>
-
-    <div className="resend_btn">
-            {/* <input type={Text}></input> */}
-      <TextField
-        id="standard-name"
-        // defaultValue="Small"
-        className="textField"
-        size="small"
-        variant="standard"       // .textfield::hover{} .MuiInputBas-root 
-        sx={{
-              width:'100%',
-              '& .MuiInputBase-root':{
-              
-              display:'flex',
-              alignItems:'flex-end',
-              paddingBottom:'10px'
-            },
-            }}
-            InputProps={{ endAdornment: <button onClick={()=>{console.log('clicked')
-              }} >resend</button> }}
-      />
-      
-    </div>
-
-    <button>Submit</button>
-
-    </div>}
-
-    </div>
-
-    <div className='puzzle_img'>
-
-    <img className='red-image' src={Red} alt="red-image" />
-
-    <img className='white-image' src={White} alt="white-image" />
-
-    </div>
-  </div>
-</div>
   );
 }
 

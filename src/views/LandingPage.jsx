@@ -145,6 +145,7 @@ function LandingPage() {
             pricePerHour={data.pricePerHour}
             pricePerDay={data.pricePerDay}
             available={data.available}
+            navigateTo={"/login"}
           />
          ))}     
         

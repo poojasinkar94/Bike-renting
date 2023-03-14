@@ -3,7 +3,7 @@
     background-color:#05723E;
     padding: 30px 40px;
     margin: auto;
-    width: 600px;
+    /* width: 600px; */
     height: 100vh;
 }
 
@@ -64,13 +64,65 @@
     font-family: 'Recoleta';
     font-style: normal;
     font-weight: 700;
+    font-size: 24px;
+    line-height: 108.5%;
+}
+
+.input_name input{
+    border: 1px solid #05723E;
+    background-color: #05723E;
+    border-bottom-color:#FFFFFF;
+    height: 40px;
+    margin-top: 20px;
+    margin-bottom: 10px;
+}
+
+.input_name{
+    font-size: 24px;
+    padding-top: 25px;
+    display: flex;
+    flex-direction: column;
+}
+
+.details h2{
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 700;
     font-size: 28px;
+    padding-top: 30px;
+}
+
+.documents{
     padding-top: 30px;
 }
 
 .upload{
     display: flex;
-    justify-content:space-between;
+    align-items: center;
+}
+
+.upload_icon_1 {
+    margin-left: 25px;
+}
+
+.upload_icon_2 {
+    margin-left: 27px;
+}
+
+.upload_icon_3 {
+    margin-left: 52px;
+}
+
+.upload_icon_1 input {
+    display: none;
+}
+
+.upload_icon_2 input {
+    display: none;
+}
+
+.upload_icon_3 input {
+    display: none;
 }
 
 .upload p{
@@ -97,10 +149,14 @@
    font-family: 'Recoleta';
 } 
 
-/* .bottom_patch{
-    margin-left: -40px;
+@media all and (max-width:768px){
+    .SelectedBikeForm{
+        width: 600px;
+        height: 100vh;
+    }
 }
-
-.bottomPatch {
-   margin-top: 280px;
-} */
+        
+        
+        
+        
+        

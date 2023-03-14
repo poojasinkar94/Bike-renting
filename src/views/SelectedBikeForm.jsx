@@ -44,29 +44,49 @@ function SelectedBikeForm() {
 
     <div className="details">
         <h2>Details</h2>
+
+        <form action="">
+        <div className='input_name'>
+        <label for="fname">Name</label>
+        <input type="text" id="fname" name="fname"/>
+        </div>
+          
+        <div className='input_name'>
+        <label for="phone">Phone number</label>
+        <input type="tel" id="phone" name="phone" maxLength={10} required/>
+        </div>
+        </form>
         
-        
+        <div className='documents'>
+
         <div className="upload">
           <p>Aadhar Card front</p>
-          <div className="upload_icon">
-            <FileUploadOutlinedIcon/>
+          <div className="upload_icon_1">
+            <label htmlFor="uploadAadharFront"><FileUploadOutlinedIcon/>
+            </label>
+            <input type="file" id='uploadAadharFront'/>
           </div>
         </div>
 
         <div className="upload">
           <p>Aadhar Card back</p>
-          <div className="upload_icon">
-            <FileUploadOutlinedIcon/>
+          <div className="upload_icon_2">
+            <label htmlFor="uploadAadharBack"><FileUploadOutlinedIcon/>
+            </label>
+            <input type="file" id='uploadAadharBack'/>
           </div>
         </div>
 
         <div className="upload">
           <p>Driving license</p>
-          <div className="upload_icon">
-            <FileUploadOutlinedIcon/>
+          <div className="upload_icon_3">
+            <label htmlFor="uploadDriving License"><FileUploadOutlinedIcon/>
+            </label>
+            <input type="file" id='uploadDriving License'/>
           </div>
         </div>
         
+        </div>
     </div>
     
     <div className="btn_pay">
