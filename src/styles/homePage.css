@@ -11,9 +11,19 @@
     
 
 .heading{
-    margin: 40px;
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 20px;
     display: flex;
     justify-content:space-between;  
+}
+
+.profileName{
+    display: flex;
+}
+
+.profileName h1{
+    padding-left: 10px;
 }
 
 .heading .HomePageLogo{
@@ -21,9 +31,7 @@
     height: 50px;
 }
 
-.heading h1{
-    margin-right:600px;
-}
+
 
 .heading .HomePageCall{
     width: 30px;

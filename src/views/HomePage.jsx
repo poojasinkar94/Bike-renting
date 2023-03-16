@@ -63,9 +63,11 @@ function HomePage() {
     <div className='Home_Page'>
         <div className="main_heading">
         <div className='heading'>
+            <div className='profileName'>
             <img className='HomePageLogo' src={Logo} alt="HomePageLogo" />
 
             <h1>Kaushik khandelwal</h1>
+            </div>
 
             <img className='HomePageCall' src={Call} alt="HomePageCall" />
 

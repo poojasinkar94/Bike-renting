@@ -4,18 +4,6 @@
     box-sizing: border-box;
 }
 
-/* .header{
-    width: 100%;
-    height: 20%;
-    background-color:#05723E;
-}
-
-.header_content{
-    display: flex;
-} */
-
-
-
 .banner{
     background-image: url(../images/landing-page/banner.png);
     background-repeat: no-repeat;
@@ -167,29 +155,23 @@
 }
 
 .card_content{
-    /* margin:3.5%; */
     margin-top: 20px;
     padding: 20px;
     display: flex;
-    /* flex-direction: column; */
     justify-content: space-between;
     flex-wrap: wrap;
     
 }
 
 
+@media all and (max-width:375px){
+    .banner{
+        width: 100%;
+    }
+}
+
+
 @media all and (max-width:768px) {
-    /* .header{
-        height: 10.5%;
-    }
-    .header_content p{
-        margin-left:40px;
-        margin-top: 30px;
-    }
-    .icons{
-        margin-top: 30px;
-    } */
-    
     .banner{
         background-position: center;
     }
@@ -209,7 +191,6 @@
     .air_plane{
         top:600px;
         right:10px;
-        /* left: 575px; */
     }
 
     .about-us{
@@ -225,7 +206,6 @@
     .left-content p{
         width: 100%;
         font-size:1.5rem;
-        /* padding-right:121px; */
     }
 
     .right-content {
@@ -240,7 +220,6 @@
 
     .products{
         padding: 0 30px;
-        /* padding-top:15px */
     }
 
     .card_title h1{
@@ -268,7 +247,7 @@
 @media all and (max-width:1024px){
     
     .air_plane{
-        top:762px;
+        top:714px;
         right:15px;
     }
 
