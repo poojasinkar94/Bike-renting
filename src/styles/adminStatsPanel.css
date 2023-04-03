@@ -1,0 +1,76 @@
+.main_stats{
+    height: 100vh;
+}
+
+.stats{
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+}
+
+.stats_icon{
+    padding: 20px;
+}
+
+.stats_booking_green{
+   width: 80%;
+   height: 140px;
+   background-color:#05723E;
+   border-radius: 27px;
+   margin: auto;
+   margin-top: 35px;
+}
+
+.bookings{
+    padding: 28px 28px 20px 28px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.bookings h2{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 40px;
+    line-height: 108.5%;
+    color: #FFFFFF;
+}
+
+.booking_percentage{
+    display: flex;
+    justify-content: space-between;
+}
+
+.stats_arrow_icon{
+    color:#FFFFFF;
+    padding-top: 10px;
+}
+
+.booking_percentage p{
+    font-weight: 400;
+    font-size: 20px;
+    line-height: 108.5%;
+    display: flex;
+    align-items: center;
+    color: #FFFFFF;
+}
+
+.booking_para{
+    padding: 0 28px 0 28px;
+}
+
+.booking_para p{
+    font-weight: 600;
+    font-size: 16px;
+    line-height: 108.5%;
+    color: #FFFFFF;
+}
+
+.stats_booking_red{
+    width: 80%;
+    height: 140px;
+    background-color: #C20909;;
+    border-radius: 27px;
+    margin: auto;
+    margin-top: 35px;
+ }

@@ -8,6 +8,9 @@ import HomePage from './views/HomePage';
 import SelectedBikeForm from './views/SelectedBikeForm';
 import Order from './views/Order';
 import AdminHome from './adminViews/AdminHome';
+import AdminStatsPanel from './adminViews/AdminStatsPanel';
+import AdminBikePanel from './adminViews/AdminBikePanel';
+import AdminOrderPage from './adminViews/AdminOrderPage';
 
 
 function App() {
@@ -23,8 +26,10 @@ function App() {
     <Route path="/admin/login" element={<LoginPage/>}/>
     <Route path="/admin/signup" element={<SignupPage/>}/>
     <Route path="/admin/home" element={<AdminHome/>}/>
-    <Route path="/admin/order" element={<Order/>}/>
+    <Route path="/admin/order" element={<AdminOrderPage/>}/>
     <Route path="/admin/form" element={<SelectedBikeForm/>}/>
+    <Route path="/admin/stats" element={<AdminStatsPanel/>}/>
+    <Route path="/admin/bike" element={<AdminBikePanel/>}/>
     </Routes>
       
       {/* <ProductCard/> */}

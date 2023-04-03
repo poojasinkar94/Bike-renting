@@ -1,0 +1,110 @@
+.main_admin_order{
+    height: 100vh;
+}
+
+.admin_order{
+    margin: auto;
+    width: 100%;
+}
+
+.admin_order_icons{
+    padding: 30px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.adminOrderList{
+    margin: 40px;
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E9E8E8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.adminOrderDate{
+    border-bottom: 2px solid #E9E8E8;
+    display: flex;
+}
+
+.adminOrderDate p{
+    padding: 0 15px ;
+}
+
+#adminOrderPrice{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.adminOrderBikePrice h2{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    color: #000000;
+}
+
+.orderDetails{
+    margin: 0 40px 0 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.documents{
+    margin:0 40px 0 40px;
+}
+
+.documents p{
+    font-size: 20px;
+    line-height: 200%;
+}
+
+.documents button{
+    font-size: 20px;
+    line-height: 200%;
+    border: none;
+    text-decoration: underline;
+    background-color: white;
+    color: #C20909;
+}
+
+.documents .document_aadhar_front{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.documents .document_aadhar_back{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.documents .document_license{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.orderDetailPaid{
+    margin: 40px 40px 0 40px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.deliveredBtn{
+    padding-top: 10px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.deliveredBtn p{
+    font-weight: 400;
+    font-size: 16px;
+    line-height: 108.5%;
+    display: flex;
+    align-items: center;
+    color: #38950D;
+}
+
