@@ -2,7 +2,7 @@ import React from 'react'
 import Bike from '../../images/landing-page/bike.png';
 import '../../styles/commonStyle.css';
 
-function RentNowBtn(props) {
+function IconButton(props) {
     const width = props.width;
   return (
     
@@ -26,4 +26,4 @@ function RentNowBtn(props) {
   )
 }
 
-export default RentNowBtn
+export default IconButton

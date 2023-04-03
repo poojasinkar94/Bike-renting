@@ -1,5 +1,7 @@
+/* Icon Button */
+
 .rent-now-btn {
-    margin-top:4%; 
+    /* margin-top:4%;  */
     width:165px;
     height: 45px;
     padding:0.5%;
@@ -15,23 +17,66 @@
     justify-content: center;
 }
 
+/* button */
+
+.submit_btn{
+    border-radius: 28px;
+    border: none;
+    background-color: #FFFFFF;
+    width: 94px;
+    height: 39px;
+    font-family: 'Recoleta';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 20px;
+    line-height: 108.5%;
+    color: #000000;
+}
+
+.btn_dialog_box{
+    margin-top: 50px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+
 /* Styles for transition Dialog Box */
 
-/* .openDialogBox{
-    background-color:#05723E;
-} */
+.dialogContainer .MuiDialog-paper{
+    background: none;
+    border-radius: 20px 20px 0px 0px;
+}
+
+.dialogContainer .MuiDialogContent-root{
+    padding: 0;
+}
 
 .dialogContentMain{
     background-color:#05723E;
-    width:600px;
-    height: 1200px;
+    border-radius: 20px 20px 0px 0px;
+    /* width:428px; */
+    width: 100%;
+    height:680px;
     color:#FFFFFF;
+}
+
+.dialog_main_container{
+    padding: 20px;
+}
+
+.header_img{
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 .dialogContentMain h1{
     font-family: 'Recoleta';
     font-weight: 700;
-    font-size: 32px;
+    font-size: 40px;
+    margin-top: 30px;
 }
 
  .para1{
@@ -39,14 +84,129 @@
     font-style: italic;
     font-weight: 300;
     font-size: 12px;
-    line-height: 200%;
+    line-height: 125%;
 }
 
-.para2{
+.select_bike_option p{
     font-family: 'Lato';
     font-style: normal;
     font-weight: 400;
-    font-size: 20px;
-    line-height: 200%;
+    font-size: 22px;
+    margin-top: 30px;
 }
+
+.select_option select{
+    width: 250px;
+    border: none;
+    height: 40px;
+    border-radius:20px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.select_date input{
+    width: 150px;
+    border: none;
+    height: 40px;
+    border-radius:20px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.select_period input{
+    width: 150px;
+    border: none;
+    height: 40px;
+    border-radius:20px;
+    margin-top: 10px;
+    padding: 10px;
+}
+
+.footer_patch{
+    position: absolute;
+    bottom: 0;
+}
+
+/* patch css */
+
+.Home_Page_title{
+    margin: 10px 0;
+}
+
+.Home_Page_patch{
+    background-color:#05723E ;
+    width: 100%;
+    height: 60px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Home_Page_patch h1{
+    color: #FFFFFF;
+    padding-left: 40px;
+    font-size: 30px;
+}
+
+.HomePatch {
+    width: 110px;
+    height: 110px;
+}
+
+@media all and (max-width:425px){
+    .Home_Page_patch h1{
+        font-size: 23px;
+        padding-left: 25px;
+    }
+
+    .HomePatch {
+        width: 80px;
+        height: 80px;
+    }
+}
+
+
+
+@media all and (max-width:425px){
+    .dialogContentMain{
+        width: 300px;
+        height: 500px;
+    }
+    
+    .dialogContentMain h1{
+        font-size: 28px;
+    }
+
+    .para1{
+        font-size: 10px;
+    }
+
+    .select_bike_option p{
+        font-size: 20px;
+        margin-top: 25px;
+    }
+
+    .select_option select{
+        width: 200px;
+        border: none;
+        height: 30px;
+    }
+
+    .select_date input{
+        width: 200px;
+        border: none;
+        height: 30px;
+    }
+
+    .select_period input{
+        width: 100px;
+        border: none;
+        height: 30px;
+    }
+
+}
+
+
+
+
 

@@ -1,0 +1,130 @@
+.Admin_Home_Page{
+    height: 100vh;
+}
+
+.Admin_Main_Heading{
+    margin: auto;
+    width: 100%;
+    height: 100vh;
+    /* background-color: rgb(33, 37, 37); */
+}
+
+.heading{
+    width: 100%;
+    margin: 20px 0;
+    padding: 0 20px;
+    display: flex;
+    justify-content: space-between;
+}
+
+.admin_profile_name{
+    display: flex;
+}
+
+.admin_profile_name h1{
+    padding-left: 10px;
+}
+
+.admin_profile_name .AdminHomePageLogo{
+    width: 50px;
+    height: 50px;
+}
+
+.heading .SettingIcon{
+    width: 30px;
+    height: 30px;
+    margin-top: 10px;
+}
+
+.adminBtn{
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.Admin_Home_Page_title{
+    width: 100%;
+    height: 60px;
+    margin-top: 30px;
+    background-color: #05723E;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.Admin_Home_Page_title h1 {
+    color: #FFFFFF;
+    padding-left: 40px;
+    font-size: 30px;
+}
+
+.AdminHomePatch{
+    width: 110px;
+    height: 110px;
+}
+
+.Admin_bike_list{
+    margin: 40px;
+}
+
+.Admin_bike_list p{
+    margin-bottom: 20px;
+}
+
+
+
+.list{
+    padding-bottom: 10px;
+    border-bottom: 2px solid #E9E8E8;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.date{
+    border-bottom: 2px solid #E9E8E8;
+    display: flex;
+}
+
+.date p {
+    padding: 0 15px ;
+}
+
+#pricePara{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.bikePrice h2{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 900;
+    font-size: 28px;
+    color: #000000;
+}
+
+#ToBeDelivered{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    color:  #950D0D;;
+}
+
+#delivered{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    color: #38950D;
+}
+
+#cancelled{
+    font-family: 'Lato';
+    font-style: normal;
+    font-weight: 700;
+    font-size: 11px;
+    color: #950D0D;
+}

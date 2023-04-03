@@ -9,7 +9,7 @@ import Whatsup from '../images/header/whatsup.png'
 import Login from '../images/header/login.png'
 import ProductCard from '../components/ProductCard'
 import { useNavigate } from "react-router-dom";
-import RentNowBtn from '../components/common/RentNowBtn'
+import IconButton from '../components/common/IconButton'
 
 const BIKE_DATA = [
   {
@@ -98,7 +98,7 @@ function LandingPage() {
           {/* <div className='button-rent-now'>
             <button onClick={navigateToLogin}><img className='bike_image' src={Bike} alt='cartoon_bike'/>rent now</button>
           </div> */}
-          <RentNowBtn onClick={navigateToLogin}
+          <IconButton onClick={navigateToLogin}
             width={'200px'}
             label={'Rent now'}
           />
