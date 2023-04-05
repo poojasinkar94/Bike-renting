@@ -122,10 +122,10 @@
     padding: 10px;
 }
 
-.footer_patch{
+/* .footer_patch{
     position: absolute;
     bottom: 0;
-}
+} */
 
 /* patch css */
 
@@ -153,6 +153,12 @@
     height: 110px;
 }
 
+@media all and (max-width:375px){
+   .Home_Page_patch{
+        width: 100%;
+    }
+}
+
 @media all and (max-width:425px){
     .Home_Page_patch h1{
         font-size: 23px;
@@ -162,6 +168,10 @@
     .HomePatch {
         width: 80px;
         height: 80px;
+    }
+
+    .Home_Page_patch{
+        width: 100%;
     }
 }
 

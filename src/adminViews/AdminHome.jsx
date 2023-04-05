@@ -77,13 +77,13 @@ const PREVIOUS_ORDER_DATA = [
 function AdminHome() {
   const [openDialogBox, setOpenDialogBox] = useState(false);
 
-  // const handleOpenDialogBox = () => {
-  //   setOpenDialogBox(true);
-  // };
+  const handleOpenDialogBox = () => {
+    setOpenDialogBox(true);
+  };
 
-  // const handleCloseDialogBox = () => {
-  //   setOpenDialogBox(false);
-  // };
+  const handleCloseDialogBox = () => {
+    setOpenDialogBox(false);
+  };
 
   return (
     <div className="Admin_Home_Page">
@@ -107,7 +107,9 @@ function AdminHome() {
         {/* rent now button */}
 
         <div className="adminBtn">
-          <IconButton />
+          <IconButton 
+            onClick = {handleOpenDialogBox}
+          />
         </div>
 
         <div className="patch">
@@ -197,8 +199,9 @@ function AdminHome() {
       </div>
 
       <TransitionDialogBox 
-        // open={openDialogBox}
-        // handleClose={handleCloseDialogBox}
+        open={openDialogBox}
+        handleClose={handleCloseDialogBox}
+        admin
       />
 
     </div>

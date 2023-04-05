@@ -31,6 +31,8 @@ export default function TransitionDialogBox(props) {
     navigate("/admin/form");
   }
 
+  
+
   return (
     <div className='openDialogBox'>
       
@@ -88,7 +90,7 @@ export default function TransitionDialogBox(props) {
         
         <div className='btn_dialog_box'>
 
-        <Button onClick={navigateToSelectedBikeForm}
+        <Button onClick={props.admin? navigateToAdminSelectedBikeForm:navigateToSelectedBikeForm}
            backGroundColor = {'white'}
            label = {'Submit'}
         />
@@ -97,7 +99,7 @@ export default function TransitionDialogBox(props) {
 
       </div>
 
-        <div className="footer_patch">
+        {/* <div className="footer_patch">
           
             <img className='FooterPatch' src={FooterPatch} alt="FooterPatch" />
           
@@ -107,7 +109,7 @@ export default function TransitionDialogBox(props) {
          
             <img className='FooterPatch' src={FooterPatch} alt="FooterPatch" />
 
-        </div>
+        </div> */}
        
 
         </DialogContent>

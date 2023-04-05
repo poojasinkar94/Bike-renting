@@ -1,18 +1,48 @@
 import React from 'react'
 import '../styles/selectedBikeForm.css'
-import Arrow from '../images/selected bike form/arrow.png'
 import Bike from '../images/selected bike form/bikeSelect.png'
 import Bottom from '../images/selected bike form/bottom_line.png'
 import FileUploadOutlinedIcon from '@mui/icons-material/FileUploadOutlined';
 import BottomPatch from '../images/selected bike form/bottom_patch.png'
+import { useNavigate } from 'react-router-dom';
+import KeyboardBackspaceSharpIcon from "@mui/icons-material/KeyboardBackspaceSharp";
 
 function SelectedBikeForm() {
+
+  const navigate = useNavigate();
+
+  const navigateToOrder = () => {
+
+    let path = window.location.pathname // "/admin/form" 
+    // navigate("/Order");
+    console.log(typeof path)
+    if(path.includes("admin")){
+      navigate("/admin/Order");
+    }else{
+      navigate("/Order");
+    }
+
+  }
+
+  const navigateToAdminHomePage = () => {
+    let path1 = window.location.pathname
+    console.log(typeof path1)
+    if(path1.includes("admin")){
+      navigate("/admin/home");
+    }else{
+      navigate("/home");
+    }
+  }
+
+
   return (
     <section className='SelectedBikeForm'>
 
     <div className="bikeForm">
         <div className="bikeSelect">
-           <img className='Arrow' src={Arrow} alt="Arrow" />
+           <KeyboardBackspaceSharpIcon 
+            onClick = {navigateToAdminHomePage}
+           />
            <p>Select Bike</p>
            <h2>Aviator</h2>
         </div>
@@ -90,7 +120,7 @@ function SelectedBikeForm() {
     </div>
     
     <div className="btn_pay">
-    <button>Pay</button>
+    <button onClick={navigateToOrder}>Pay</button>
     </div>
 
     {/* <div className="bottom_patch">

@@ -3,7 +3,7 @@ import Bike from '../../images/landing-page/bike.png';
 import '../../styles/commonStyle.css';
 
 function IconButton(props) {
-    const width = props.width;
+    const {width,onClick} = props;
   return (
     
          <button 
@@ -12,7 +12,7 @@ function IconButton(props) {
                 width: width ? width : '165',
               }}
 
-         onClick={props.onClick}
+         onClick = {onClick}
          >
          <img className='bike_image' src={Bike} alt='cartoon_bike'/>
          <span

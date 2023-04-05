@@ -21,9 +21,10 @@
 .bike_Catogory{
     margin: 35px;
     display: flex;
-    justify-content: space-between;
+    justify-content:center;
     align-items: center;
 }
+
 
 .bike_lift_catogory img {
     width:220px;
@@ -49,15 +50,20 @@
     height: 34px;
 }
 
+.bike_right_catogory{
+    padding-left: 30px;
+    width: 300px;
+}
+
 .right_bottom_content{
     display: flex;
     justify-content: space-between;
     align-items: center;
 }
 
-span{
+/* span{
     font-weight: 900;
     font-size: 12px;
     line-height: 108.5%;
     color: #000000; 
-}
+} */

@@ -4,7 +4,7 @@
     padding: 30px 40px;
     margin: auto;
     /* width: 600px; */
-    height: 100vh;
+    /* height: 100vh; */
 }
 
 .bikeForm{
@@ -149,12 +149,12 @@
    font-family: 'Recoleta';
 } 
 
-@media all and (max-width:768px){
+/* @media all and (max-width:768px){
     .SelectedBikeForm{
         width: 600px;
         height: 100vh;
     }
-}
+} */
         
         
         

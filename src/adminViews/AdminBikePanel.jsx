@@ -4,13 +4,23 @@ import KeyboardBackspaceSharpIcon from "@mui/icons-material/KeyboardBackspaceSha
 import IconButton from "../components/common/IconButton";
 import Patch from "../components/common/Patch";
 import BikePanel from "../images/Admin bike panel/BikePanel.png";
+import { useNavigate } from 'react-router-dom';
 
 function AdminBikePanel() {
+
+  const navigate = useNavigate();
+
+  const navigateToAdminHomePage = () => {
+    navigate("/admin/home");
+  }
+
   return (
     <div className="MainBikePanel">
       <div className="BikePanel">
         <div className="BikePanel_icon">
-          <KeyboardBackspaceSharpIcon />
+          <KeyboardBackspaceSharpIcon 
+            onClick = {navigateToAdminHomePage}
+          />
           <IconButton />
         </div>
 
@@ -33,7 +43,7 @@ function AdminBikePanel() {
               <div className="right_bottom_content">
                 <p>
                   {" "}
-                  <span>4</span> available
+                  <span >4</span> available
                 </p>
                 <p>
                   {" "}

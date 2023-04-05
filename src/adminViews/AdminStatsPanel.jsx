@@ -3,13 +3,23 @@ import "../styles/adminStatsPanel.css";
 import KeyboardBackspaceSharpIcon from "@mui/icons-material/KeyboardBackspaceSharp";
 import Patch from "../components/common/Patch";
 import ArrowDropUpIcon from "@mui/icons-material/ArrowDropUp";
+import { useNavigate } from 'react-router-dom';
 
 function AdminStatsPanel() {
+
+  const navigate = useNavigate();
+
+  const navigateToAdminHomePage = () => {
+    navigate("/admin/home");
+  }
+
   return (
     <div className="main_stats">
       <div className="stats">
         <div className="stats_icon">
-          <KeyboardBackspaceSharpIcon />
+          <KeyboardBackspaceSharpIcon 
+            onClick = {navigateToAdminHomePage}
+          />
         </div>
 
         <div className="system_stats_patch">

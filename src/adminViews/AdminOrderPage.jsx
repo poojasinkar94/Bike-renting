@@ -5,13 +5,22 @@ import CallSharpIcon from "@mui/icons-material/CallSharp";
 import Patch from "../components/common/Patch";
 import EditSharpIcon from "@mui/icons-material/EditSharp";
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
+import { useNavigate } from 'react-router-dom';
 
 function AdminOrderPage() {
+
+  const navigate = useNavigate();
+
+  const navigateToAdminHomePage = () => {
+    navigate("/admin/home");
+  }
   return (
     <div className="main_admin_order">
       <div className="admin_order">
         <div className="admin_order_icons">
-          <KeyboardBackspaceSharpIcon />
+          <KeyboardBackspaceSharpIcon 
+            onClick = {navigateToAdminHomePage}
+          />
           <CallSharpIcon />
         </div>
 

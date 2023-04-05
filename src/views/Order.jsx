@@ -8,13 +8,23 @@ import Order_Bike from "../images/order/order_bike.png";
 import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 import Patch from "../components/common/Patch";
 import EditIcon from '../images/order/edit_Icon.png'
+import { useNavigate } from 'react-router-dom';
 
 function Order() {
+
+  const navigate = useNavigate();
+
+  const navigateToHomePage = () => {
+    navigate("/home");
+  }
+
   return (
     <section className="main_order">
       <div className="order">
         <div className="order_icons">
-          <KeyboardBackspaceSharpIcon />
+          <KeyboardBackspaceSharpIcon 
+            onClick = {navigateToHomePage}
+          />
           <CallSharpIcon />
         </div>
 
