@@ -1,4 +1,6 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
+import Axios from "axios";
+
 import "../styles/homePage.css";
 import Logo from "../images/HomePage/home_page_logo.png";
 import Call from "../images/HomePage/home_page_call.png";
@@ -49,6 +51,7 @@ const BIKE_DATA = [
 
 function HomePage() {
   const [openDialogBox, setOpenDialogBox] = useState(false);
+  const [rowData, setRowData] = useState('')
 
   const handleOpenDialogBox = () => {
     setOpenDialogBox(true);
@@ -58,6 +61,28 @@ function HomePage() {
     setOpenDialogBox(false);
   };
 
+  let config_get = {
+    params: {
+      phoneNumber: sessionStorage.getItem("user-phonenumber")
+    }
+  }
+
+  useEffect(() => {
+    // console.log(sessionStorage.getItem("user-phonenumber"))
+    // setLoading(true);
+    Axios.get("http://localhost:3002/getuserInfo", config_get
+    ).then((response) => {
+            //console.log (response.data)
+            setRowData(response.data)
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+        .finally(() => {
+            // setLoading(false);
+        });
+}, []);
+
   return (
     <div className="Home_Page">
       <div className="main_heading">
@@ -65,7 +90,7 @@ function HomePage() {
           <div className="profileName">
             <img className="HomePageLogo" src={Logo} alt="HomePageLogo" />
 
-            <h1>Kaushik khandelwal</h1>
+            <h1>{rowData.username}</h1>
           </div>
 
           <img className="HomePageCall" src={Call} alt="HomePageCall" />
