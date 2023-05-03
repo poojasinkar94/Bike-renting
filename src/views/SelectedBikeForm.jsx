@@ -1,4 +1,7 @@
 import React from 'react'
+import  { useState, useEffect } from "react";
+import Axios from "axios";
+
 import '../styles/selectedBikeForm.css'
 import Bike from '../images/selected bike form/bikeSelect.png'
 import Bottom from '../images/selected bike form/bottom_line.png'
@@ -8,7 +11,28 @@ import { useNavigate } from 'react-router-dom';
 import KeyboardBackspaceSharpIcon from "@mui/icons-material/KeyboardBackspaceSharp";
 
 function SelectedBikeForm() {
+  const [bookingDeatils, setBookingDetails] = useState('')
+  let config_get = {
+    params: {
+      phoneNumber: sessionStorage.getItem("user-phonenumber")
+    }
+  }
 
+  useEffect(() => {
+    // console.log(sessionStorage.getItem("user-phonenumber"))
+    // setLoading(true);
+    Axios.get("http://localhost:3002/getBookingDetails", config_get
+    ).then((response) => {
+            //console.log (response.data)
+            setBookingDetails(response.data)
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+        .finally(() => {
+            // setLoading(false);
+        });
+}, []);
   const navigate = useNavigate();
 
   const navigateToOrder = () => {
@@ -43,8 +67,8 @@ function SelectedBikeForm() {
            <KeyboardBackspaceSharpIcon 
             onClick = {navigateToAdminHomePage}
            />
-           <p>Select Bike</p>
-           <h2>Aviator</h2>
+           <p>Selected Bike</p>
+           <h2>{bookingDeatils.bikeName}</h2>
         </div>
         <div className="bike">
            <img className='Bike' src={Bike} alt="Bike" />
@@ -54,14 +78,17 @@ function SelectedBikeForm() {
     <div className="bikeForm">
         <div className="left_content">
            <p> When do you want it?</p>
-           <h2>22 Feb</h2>
+           <h2>{bookingDeatils.from_date}</h2>
+           <p>to</p>
+           <h2>{bookingDeatils.to_date}</h2>
+
            <p>How long you want it?</p>
-           <h2>1 hour</h2>
+           <h2>{bookingDeatils.hours}</h2>
         </div>
         <div className="right_content">
            <p> Charges</p>
            <div className='Details_bg_color'>
-            <p>₹ 1500 + ₹ 4000*</p>
+            <p>₹ {bookingDeatils.day_charge} + ₹ 4000*</p>
             <h2>= ₹ 5500</h2>
             <p id='para2'>*refundable security deposit</p>
            </div>
@@ -78,16 +105,21 @@ function SelectedBikeForm() {
         <form action="">
         <div className='input_name'>
         <label for="fname">Name</label>
-        <input type="text" id="fname" name="fname"/>
+        <div>{bookingDeatils.username}</div>
+        {/* <input type="text" id="fname" name="fname"/> */}
         </div>
           
         <div className='input_name'>
         <label for="phone">Phone number</label>
-        <input type="tel" id="phone" name="phone" maxLength={10} required/>
+        <div>{bookingDeatils.phoneNumber}</div>
+        {/* <input type="tel" id="phone" name="phone" maxLength={10} required/> */}
         </div>
         </form>
         
         <div className='documents'>
+        <form id="uploadbanner" enctype="multipart/form-data" method="post" action="#">
+   <input id="fileupload" name="myfile" type="file" />
+
 
         <div className="upload">
           <p>Aadhar Card front</p>
@@ -115,7 +147,7 @@ function SelectedBikeForm() {
             <input type="file" id='uploadDriving License'/>
           </div>
         </div>
-        
+        </form>
         </div>
     </div>
     

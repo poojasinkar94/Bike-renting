@@ -21,13 +21,13 @@ function LoginPage() {
 
   //   getter        setter
   const [phoneNumber, setPhoneNumber] = useState("");
-  const [showResendOtp, setShowResendOtp] = useState(false);
-  const [showGetOtp, setShowGetOtp] = useState(true);
+  // const [showResendOtp, setShowResendOtp] = useState(false);
+  // const [showGetOtp, setShowGetOtp] = useState(true);
 
-  const handleGetOtp = () => {
-    setShowResendOtp(true);
-    setShowGetOtp(false);
-  };
+  // const handleGetOtp = () => {
+  //   setShowResendOtp(true);
+  //   setShowGetOtp(false);
+  // };
   const [final, setfinal] = useState('');
   const [show, setshow] = useState(false);
   const [otp, setotp] = useState('');
@@ -97,28 +97,6 @@ const ValidateOtp = () => {
                     <br /><br />
                     <button onClick={ValidateOtp}>Verify</button>
                 </div>
-          {/* <form action="">
-            <div className="input_name">
-              <label for="phone">Phone Number</label>
-              <input type="tel" id="phone" name="phone" maxLength={10} required/>
-            </div>
-          </form> */}
-          {/* {showGetOtp && (
-            <div>
-              <button onClick={handleGetOtp}>get otp</button>
-            </div>
-          )} */}
-
-          {/* {showResendOtp && (
-            <div>
-              <div className="resend_btn">
-                <input type="text" value={""} />
-                <button>resend</button>
-              </div>
-
-              <button onClick={navigateToHome}>Submit</button>
-            </div>
-          )} */}
         </div>
         <div className="puzzle_img">
           <img className="red-image" src={Red} alt="red-image" />
