@@ -9,14 +9,39 @@ import RadioButtonCheckedIcon from "@mui/icons-material/RadioButtonChecked";
 import Patch from "../components/common/Patch";
 import EditIcon from '../images/order/edit_Icon.png'
 import { useNavigate } from 'react-router-dom';
+import  { useState, useEffect } from "react";
+import Axios from "axios";
 
 function Order() {
+  const [bookingDeatils, setBookingDetails] = useState('')
 
   const navigate = useNavigate();
 
   const navigateToHomePage = () => {
     navigate("/home");
   }
+
+  let config_get = {
+    params: {
+      phoneNumber: sessionStorage.getItem("user-phonenumber")
+    }
+  }
+
+  useEffect(() => {
+    // console.log(sessionStorage.getItem("user-phonenumber"))
+    // setLoading(true);
+    Axios.get("http://localhost:3002/getBookingDetails", config_get
+    ).then((response) => {
+            //console.log (response.data)
+            setBookingDetails(response.data)
+        })
+        .catch((err) => {
+            console.log(err);
+        })
+        .finally(() => {
+            // setLoading(false);
+        });
+}, []);
 
   return (
     <section className="main_order">
@@ -30,12 +55,12 @@ function Order() {
 
         <div className="order_logo">
           <img className="HomePageLogo" src={Logo} alt="HomePageLogo" />
-          <h1>Kaushik khandelwal </h1>
+          <h1>{bookingDeatils.username} </h1>
         </div>
 
         <div className="order_detials">
           <div className="contact">
-            <p>+91 9672602342</p>
+            <p>{bookingDeatils.phoneNumber}</p>
             <EditSharpIcon />
           </div>
 
@@ -87,12 +112,14 @@ function Order() {
 
             <div className="orderBikeDetails">
               <div className="orderBikeName">
-                <h2>Aviator </h2>
+                <h2>{bookingDeatils.bikeName} </h2>
               </div>
 
               <div className="orderBikeDateHour">
-                <p>22 Feb </p>
-                <p>1 hour</p>
+                <p>{bookingDeatils.from_date}</p>
+                <p>To</p>
+                <p>{bookingDeatils.to_date}</p>
+                <p>{bookingDeatils.hours}</p>
               </div>
             </div>
 
