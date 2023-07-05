@@ -1,0 +1,7 @@
+{
+    "GETUSERINFO": "https://app.patelauto.co/getuserInfo",
+    "ADDBOOKINGDETAILS": "https://app.patelauto.co/addBookingDetails",
+    "GETBOOKINGDETAILS": "https://app.patelauto.co/getBookingDetails",
+    "UPLOADFILES": "https://app.patelauto.co/getBookingDetail",
+    "ADDBOOKINGDOCUMENTS": "https://app.patelauto.co/addBookingDocuments"
+}

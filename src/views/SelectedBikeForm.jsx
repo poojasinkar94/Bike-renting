@@ -11,6 +11,7 @@ import { useNavigate } from 'react-router-dom';
 import KeyboardBackspaceSharpIcon from "@mui/icons-material/KeyboardBackspaceSharp";
 
 function SelectedBikeForm() {
+  const api = require('../components/config/API.json')
   const [bookingDeatils, setBookingDetails] = useState('')
   const [aadharBack, setAadharBack] = useState(null);
   const [aadharFront, setAadharFront] = useState(null);
@@ -25,7 +26,7 @@ function SelectedBikeForm() {
   useEffect(() => {
     // console.log(sessionStorage.getItem("user-phonenumber"))
     // setLoading(true);
-    Axios.get("http://localhost:3002/getBookingDetails", config_get
+    Axios.get(api.GETBOOKINGDETAILS, config_get
     ).then((response) => {
             //console.log (response.data)
             setBookingDetails(response.data)
@@ -60,7 +61,7 @@ const navigateToOrder = () => {
     formData.append('file', drivingLisence);
 
     try {
-     Axios.post('http://localhost:3002/upload_files', formData, {
+     Axios.post(api.UPLOADFILES, formData, {
         headers: {
           'Content-Type': 'multipart/form-data'
         },
@@ -69,7 +70,7 @@ const navigateToOrder = () => {
         var i = 0;
         const imageArray = response.data
         imageArray.forEach(imageLink => {
-          Axios.post('http://localhost:3002/addBookingDocuments', {
+          Axios.post(api.ADDBOOKINGDOCUMENTS, {
             user_id: bookingDeatils.user_id,
             booking_id: bookingDeatils.id,
             image_url: imageLink.location

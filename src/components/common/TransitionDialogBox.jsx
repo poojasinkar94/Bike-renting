@@ -22,7 +22,7 @@ const Transition = React.forwardRef(function Transition(
 });
 
 export default function TransitionDialogBox(props) {
-  
+  const api = require('../config/API.json')
   const navigate = useNavigate();
   const [bikeCat, setBikeCat] = useState(0)
   const [fromDate, setFromDate] = useState("")
@@ -44,10 +44,10 @@ export default function TransitionDialogBox(props) {
         phoneNumber: sessionStorage.getItem("user-phonenumber")
       }
     }
-    Axios.get("http://localhost:3002/getuserInfo", config_get
+    Axios.get(api.GETUSERINFO, config_get
     ).then((response) => {
             console.log (response.data)
-            Axios.post('http://localhost:3002/addBookingDetails', {
+            Axios.post(api.ADDBOOKINGDETAILS, {
               from_date: fromDate,
               user_id: response.data.id,
               to_date: toDate,

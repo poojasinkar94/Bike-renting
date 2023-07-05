@@ -13,6 +13,7 @@ import  { useState, useEffect } from "react";
 import Axios from "axios";
 
 function Order() {
+  const api = require('../components/config/API.json')
   const [bookingDeatils, setBookingDetails] = useState('')
 
   const navigate = useNavigate();
@@ -30,7 +31,7 @@ function Order() {
   useEffect(() => {
     // console.log(sessionStorage.getItem("user-phonenumber"))
     // setLoading(true);
-    Axios.get("http://localhost:3002/getBookingDetails", config_get
+    Axios.get(api.GETBOOKINGDETAILS, config_get
     ).then((response) => {
             //console.log (response.data)
             setBookingDetails(response.data)

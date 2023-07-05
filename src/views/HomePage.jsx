@@ -50,6 +50,7 @@ const BIKE_DATA = [
 ];
 
 function HomePage() {
+  const api = require('../components/config/API.json')
   const [openDialogBox, setOpenDialogBox] = useState(false);
   const [rowData, setRowData] = useState('')
 
@@ -70,7 +71,7 @@ function HomePage() {
   useEffect(() => {
     // console.log(sessionStorage.getItem("user-phonenumber"))
     // setLoading(true);
-    Axios.get("http://localhost:3002/getuserInfo", config_get
+    Axios.get(api.GETUSERINFO, config_get
     ).then((response) => {
             //console.log (response.data)
             setRowData(response.data)
